@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav {
+  background: rgba(116, 130, 112, 0.692);
+  height: 80px;
+  width: 100%;
+}
+
+label.logo > a {
+  color: #fff;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+label.logo > a:hover {
+  background: none;
+}
+
+.nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+.nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+.nav ul li a {
+  color: white;
+  font-size: 17px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 7px 13px;
+}
+
+.nav ul li a:hover {
+  background: rgba(192, 194, 192, 0.694);
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+section {
+  background: url(img/david-marcu-78A265wPiO4-unsplash.jpg);
+  background-size: cover;
+  height: calc(100vh - 80px);
+  background-position: center center;
+}
+
+main {
+  width: 100%;
+  /* margin: 0 auto; */
+}
+
+.textBoard {
+  background-color: rgba(179, 170, 170, 0.596);
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.textBoard:hover {
+  background-color: rgba(99, 95, 95, 0.651);
+}
+
+@media (max-width: 925px) {
+  label.logo > a {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  .nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(22, 23, 22, 0.692);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  .nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  .nav ul li a {
+    font-size: 20px;
+  }
+  .nav ul li a:hover {
+    background: none;
+    color: green;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  main {
+    width: 500px;
+    margin: auto 0;
+  }
+  .textBoard > h2 {
+    font-size: 1rem;
+  }
+}
